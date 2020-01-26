@@ -1,0 +1,63 @@
+@charset "UTF-8";
+/* Modos claro e escuro*/
+.light{
+    background-color: rgb(231, 217, 188);
+}
+.dark{
+    background-color: rgba(37, 21, 8, 0.89);
+    color: rgb(219, 203, 170);
+}
+
+/*Navbar*/
+
+nav *{
+    display: inline-block;
+    vertical-align: top;
+    font-size: large;
+    margin-top: -1px;
+}
+nav img{
+    height: 1cm;
+    width: 1cm;
+}
+nav#menu ul{
+    list-style: none;
+    text-transform: uppercase;
+    float: right;
+}
+nav#menu ul li{
+    margin-right: 15px;
+}
+
+p.justfied{
+    text-align: justify;
+    text-indent: 2cm;
+}
+
+/*Figuras com legenda*/
+
+figure.caption{
+    position: relative;
+    display: inline-block;
+}
+figure.caption img{
+    
+    box-shadow: 1px 1px 5px white;
+    border: 0.1cm solid rgba(255, 255, 255, 0.5) ;
+    
+}
+figure.caption figcaption{
+    position: absolute;
+    bottom: 0px;
+    background-color: rgba(0, 0, 0, 0.4);
+    color: wheat;
+    width: 100%;
+    padding-left: 10px;
+    box-sizing: border-box;
+    opacity: 0;
+    transition: opacity 1s;
+}
+figure.caption:hover figcaption{
+    opacity: 1;
+    
+}
