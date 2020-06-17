@@ -1,5 +1,46 @@
 @charset "UTF-8";
+/*body*/
+.dark{
+    background:#000000; 
+    color: #FAEBD7;
+}
+.gray{
+    background:#36393E;
+    color: #FAEBD7;
+}
+.purple{
+    background: #383143;
+    color: #FAEBD7;
+}
+.beige{
+    background: #FAEBD7;
+    color: #000000
+}
+.dark-brown{
+    background: #231710;
+    color: #FAEBD7
+}
 
+/*Body Content*/
+.padding{
+    padding-top: 25px;
+    padding-bottom:25px;
+}
+.padding img{
+    padding-left: 25px;
+    padding-right: 25px;
+}
+.content p{
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+
+/*Images*/
+.content img{
+    width: 80%;
+    height: 100%;   
+}
 
 
 
