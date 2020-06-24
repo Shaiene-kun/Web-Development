@@ -1,5 +1,6 @@
 //jQuery Code
 
+$(document).ready( () => { $("#cepTable").hide() })
 function ajaxCep() //Getting CEP info
 {
     var cep = $("#inputCEP").val() //USing the number the user inputs
@@ -12,21 +13,17 @@ function ajaxCep() //Getting CEP info
             //Adding parts of the address into an ul            
             var address =
             [ 
-                {name:"CEP", addr: response.cep},
-                {name:"Street", addr: response.logradouro}, 
-                {name:"Neighborhood", addr: response.bairro}, 
-                {name:"City", addr: response.localidade},
-                {name:"State", addr: response.uf} 
+                {name:"brCep", addr: response.cep},
+                {name:"brStreet", addr: response.logradouro}, 
+                {name:"brNeighborhood", addr: response.bairro}, 
+                {name:"brCity", addr: response.localidade},
+                {name:"brState", addr: response.uf} 
             ]
-            $("#CEP").append('<ul')
             for (part of address) 
             {
-                $("#CEP").append( ()=>
-                {             
-                    return $("<li></li>").text(part.name+": "+part.addr) 
-                })
+                $("#"+part.name).text(part.addr) 
             }
-            $("#CEP").append("</ul>")        
+            $("#cepTable").show()
         }
     })
     
